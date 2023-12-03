@@ -37,10 +37,7 @@ struct CellTable(Vec<Vec<Cell>>);
 
 impl CellTable {
     fn get_cell(&self, x: usize, y: usize) -> Option<&Cell> {
-        match self.0.get(y) {
-            Some(bla) => bla.get(x),
-            _ => None,
-        }
+        self.0.get(y).and_then(|row| row.get(x))
     }
 }
 
