@@ -1,0 +1,5 @@
+/target
+.idea
+
+input
+!input/2023/day0.txt
